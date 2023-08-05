@@ -120,7 +120,7 @@ div h1 {
     margin-top: 100px;
     position: relative;
     padding-top: 60px;
-    border-left: 5px solid #027373;
+    margin-left: 5px;
     animation: scaleOne .9s linear 0s;
 }
 
@@ -173,7 +173,7 @@ div h1 {
     color: var(--thirdColor);
 }
 
-.boxser .info a {
+.boxser .info span {
     text-decoration: none;
     color: var(--thirdColor);
     font-size: 14px;
@@ -229,6 +229,27 @@ div h1 {
     transform: skewX(30deg);
 }
 
+.boxser:hover i,
+.boxser:hover h3 {
+    visibility: hidden;
+}
+
+.boxser:hover .info .Det {
+    visibility: visible;
+}
+
+.Det {
+    position: absolute;
+    bottom: 80%;
+    left: 0;
+    z-index: 100;
+    font-weight: 400;
+    padding: 5px;
+    visibility: hidden;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
 /* End ser */
 /* Start Projct */
 .allboxes .boxpro {
@@ -255,6 +276,7 @@ div h1 {
     height: 0;
     opacity: 0;
     z-index: 2;
+    cursor: pointer;
     animation: flashing .7s;
 }
 
@@ -353,10 +375,10 @@ hr {
 }
 
 .ico {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 200px;
+    margin: auto;
 }
 
 /* start lang */
@@ -366,6 +388,9 @@ hr {
     align-items: center;
     margin-top: 100px;
     flex-wrap: wrap;
+    width: fit-content;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 .lang a {
@@ -376,15 +401,11 @@ hr {
 .lang a:nth-child(1) {
     background-color: var(--firstColor);
     padding: 10px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
 }
 
 .lang a:nth-child(2) {
     background-color: var(--fifthColor);
     padding: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
 }
 
 div.all+div {
