@@ -1,9 +1,9 @@
 :root {
-  --firstColor: #027373;
-  --secondColor: #038C7F;
-  --thirdColor: #A9D9D0;
-  --forthColor: #F2E7DC;
-  --fifthColor: #0D0D0D;
+  --firstColor: #000000;
+  --secondColor: #590000;
+  --thirdColor: #814F4C;
+  --forthColor: white;
+  --fifthColor: #21110F;
 }
 
 * {
@@ -37,7 +37,7 @@ body {
   flex-direction: column;
   background-color: var(--secondColor);
   border-radius: 10px;
-  box-shadow: 1px 1px 20px 0px var(--fifthColor);
+  box-shadow: 1px 1px 20px 0px var(--firstColor);
   text-align: center;
   z-index: 1000;
 }
@@ -65,7 +65,7 @@ body {
 }
 
 .all nav ul li a:hover,
-.all nav ul li a:active {
+.all nav ul li a.active {
   background-color: var(--firstColor);
 }
 
@@ -145,7 +145,7 @@ div h1 {
   width: 150px;
   border-radius: 50%;
   position: absolute;
-  border: 5px solid #038c7f;
+  border: 5px solid var(--secondColor);
   right: 25px;
   top: -75px;
 }
@@ -202,7 +202,7 @@ div h1 {
 .info {
   display: flex;
   justify-content: end;
-  background-color: #027373;
+  background-color: var(--firstColor);
   position: absolute;
   width: 100%;
   left: 0;
@@ -229,7 +229,7 @@ div h1 {
 .info::after {
   content: " ";
   position: absolute;
-  background-color: #027373;
+  background-color: var(--firstColor);
   left: 52px;
   top: 0;
   height: 100%;
@@ -366,6 +366,11 @@ hr {
 
 .Social a i {
   color: var(--forthColor);
+  transition: .2s;
+}
+
+.Social a i:hover {
+  color: var(--secondColor);
 }
 
 .ico {
@@ -393,11 +398,11 @@ hr {
 }
 
 .lang a:nth-child(1) {
-  background-color: var(--fifthColor);
+  background-color: var(--firstColor);
   padding: 10px;
 }
 
 .lang a:nth-child(2) {
-  background-color: var(--firstColor);
+  background-color: var(--fifthColor);
   padding: 10px;
 }
